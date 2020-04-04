@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { StateNameContext } from '../../utils/StateName';
 
 function Home() {
+  const [stateName, setStateName] = useContext(StateNameContext);
+
   return (
     <>
-      <div>hello world</div>
+      <div>{stateName} hello world</div>
     </>
   );
 }

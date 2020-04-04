@@ -1,5 +1,5 @@
 import React from 'react';
-import { AllStatesDataProvider } from './AllStatesDataContext';
+import { AllStatesDataProvider } from './AllStatesData';
 import { USADataProvider } from './USAData';
 import { StateDataProvider } from './StateData';
 import { StateNameProvider } from './StateName';
