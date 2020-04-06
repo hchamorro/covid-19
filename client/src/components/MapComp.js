@@ -20,22 +20,27 @@ function MapComp() {
 
   function hoverFill(e) {
     e.target.style.fill = 'black';
-    AllStatesData.forEach((stateData) => {
-      if (stateData.state === e.target.id) {
-        setTotalTested(stateData.total);
-        setTotalPositive(stateData.positive);
-      }
-    });
+    const id = e.target.id;
+    // tooltipData(id);
   }
 
   function revertFill(e) {
     e.target.style.fill = '#D3D3D3';
   }
 
+  function tooltipData(id) {
+    AllStatesData.forEach((stateData) => {
+      if (stateData.state === id) {
+        setTotalTested(stateData.total);
+        setTotalPositive(stateData.positive);
+      }
+    });
+  }
+
   return (
     <>
       <div style={elStyle}>
-        <svg xmlns="http://www.w3.org/2000/svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="959" height="593">
           <defs>
             <style type="text/css"></style>
           </defs>
