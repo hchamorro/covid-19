@@ -4,9 +4,12 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import { StateNameContext } from '../utils/StateName';
+import { StateDataContext } from '../utils/StateData';
+import Axios from 'axios';
 
 function StateMenu() {
   const [stateName, setStateName] = useContext(StateNameContext);
+  const [stateData, setStateData] = useContext(StateDataContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -20,10 +23,17 @@ function StateMenu() {
 
   const handleStateName = (event) => {
     let state = event.target.id;
-    console.log(state);
     setStateName(state);
+    getData(state);
     handleClose();
   };
+
+  function getData(state) {
+    setStateName(state);
+    Axios.get(
+      `https://cors-anywhere.herokuapp.com/https://covidtracking.com/api/states/daily?state=${state}`
+    ).then((res) => setStateData(res.data));
+  }
 
   return (
     <div>

@@ -30,6 +30,21 @@ function StateResults(props) {
                 <strong>{stateData[0].positive}</strong> people have tested
                 positive.
               </div>
+              <div>
+                <strong>{stateData[0].hospitalizedCumulative}</strong> total
+                hospitalized cumulatively. positive.
+              </div>
+              <div>
+                <strong>{stateData[0].hospitalizedCurrently}</strong> are
+                currently hospitalized.
+              </div>
+              <div>
+                <strong>{stateData[0].recovered}</strong> have recovered.
+              </div>
+              <div>
+                <strong>{stateData[0].death}</strong> have died.
+              </div>
+
               <br />
               <div>
                 {Math.floor(
