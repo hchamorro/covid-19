@@ -30,6 +30,7 @@ function StateMenu() {
         aria-controls="fade-menu"
         aria-haspopup="true"
         onClick={handleClick}
+        variant="contained"
       >
         Choose State
       </Button>
