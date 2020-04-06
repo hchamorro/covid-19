@@ -30,28 +30,44 @@ function StateResults(props) {
                 <strong>{stateData[0].positive}</strong> people have tested
                 positive.
               </div>
-              <div>
-                <strong>{stateData[0].hospitalizedCumulative}</strong> total
-                hospitalized cumulatively. positive.
-              </div>
-              <div>
-                <strong>{stateData[0].hospitalizedCurrently}</strong> are
-                currently hospitalized.
-              </div>
-              <div>
-                <strong>{stateData[0].recovered}</strong> have recovered.
-              </div>
-              <div>
-                <strong>{stateData[0].death}</strong> have died.
-              </div>
+              {stateData[0].hospitalizedCumulative ? (
+                <div>
+                  <strong>{stateData[0].hospitalizedCumulative}</strong> total
+                  hospitalized cumulatively.
+                </div>
+              ) : (
+                ''
+              )}
+              {stateData[0].hospitalizedCurrently ? (
+                <div>
+                  <strong>{stateData[0].hospitalizedCurrently}</strong> are
+                  currently hospitalized.
+                </div>
+              ) : (
+                ''
+              )}
+              {stateData[0].death ? (
+                <div>
+                  <strong>{stateData[0].death}</strong> have died.
+                </div>
+              ) : (
+                ''
+              )}
+              {stateData[0].recovered ? (
+                <div>
+                  <strong>{stateData[0].recovered}</strong> have recovered.
+                </div>
+              ) : (
+                'No info on recovery available at this time.'
+              )}
 
               <br />
-              <div>
+              {/* <div>
                 {Math.floor(
                   (stateData[0].positive / USAData[0].positive) * 100
                 )}
                 % of all positive cases across the United States.
-              </div>
+              </div> */}
               <button style={button} onClick={() => setShowChart(!showChart)}>
                 {stateName}: {showChart ? 'Hide' : 'See More'}
               </button>
