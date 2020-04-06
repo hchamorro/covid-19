@@ -76,13 +76,7 @@ function StateResults(props) {
           </div>
         </>
       ) : (
-        <div>
-          'Waiting for information'
-          <button style={button} onClick={() => setShowChart(!showChart)}>
-            {stateName}: {showChart ? 'Hide' : 'See More'}
-          </button>
-          {showChart ? 'will be chart' : ''}
-        </div>
+        <div>'Waiting for information'</div>
       )}
     </>
   );
