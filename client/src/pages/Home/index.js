@@ -6,6 +6,7 @@ import { AllStatesDataContext } from '../../utils/AllStatesData';
 import { StateDataContext } from '../../utils/StateData';
 import StateMenu from '../../components/StateMenu';
 import MapComp from '../../components/MapComp';
+import StateResultsCard from '../../components/StateResultsCard';
 
 function Home() {
   const [stateName, setStateName] = useContext(StateNameContext);
@@ -42,6 +43,7 @@ function Home() {
       <div>{stateName} hello world</div>
       <StateMenu />
       <MapComp />
+      <StateResultsCard />
     </>
   );
 }
