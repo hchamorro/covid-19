@@ -43,7 +43,9 @@ function Home() {
   return (
     <>
       <div className="headerWrapper">
-        <section className="headerOne">COVID-19 by State</section>
+        <section className="headerOne">
+          <strong>COVID-19 by State </strong>
+        </section>
         <section className="headerTwo">
           Data updates daily at 4:00 p.m. EST.
         </section>
@@ -52,7 +54,7 @@ function Home() {
         </section>
       </div>
       <div className="content">
-        <div>
+        <div className="cardWrapper">
           <section className="card">
             <div className="cardTitle">
               <LongName />
@@ -61,6 +63,7 @@ function Home() {
           </section>
           <section>{/* future chart */}</section>
         </div>
+
         <div className="map">
           <MapComp />
         </div>
