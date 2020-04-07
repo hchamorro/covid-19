@@ -30,6 +30,9 @@
   flex-direction: column;
   align-items: center;
 }
+.stateMenu {
+  margin: 0.25rem;
+}
 
 @media only screen and (max-width: 500px) {
   .cardContent {

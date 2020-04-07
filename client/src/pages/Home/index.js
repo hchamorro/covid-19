@@ -47,6 +47,9 @@ function Home() {
         <section className="headerTwo">
           Data updates daily at 4:00 p.m. EST.
         </section>
+        <section className="stateMenu">
+          <StateMenu />
+        </section>
       </div>
       <div className="content">
         <div>
@@ -56,9 +59,7 @@ function Home() {
             </div>
             <StateResultsCard />
           </section>
-          <section>
-            <StateMenu />
-          </section>
+          <section>{/* future chart */}</section>
         </div>
         <div className="map">
           <MapComp />
