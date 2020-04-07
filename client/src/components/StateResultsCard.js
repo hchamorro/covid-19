@@ -18,7 +18,6 @@ function StateResults(props) {
 
   return (
     <>
-      {console.log(stateData)}
       {stateData && USAData ? (
         <>
           <div>
