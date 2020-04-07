@@ -48,17 +48,21 @@ function Home() {
           Data updates daily at 4:00 p.m. EST.
         </section>
       </div>
-      <div>
-        <section>
-          <LongName />
-          <StateResultsCard />
-        </section>
-        <section>
-          <StateMenu />
-        </section>
-      </div>
-      <div>
-        <MapComp />
+      <div className="content">
+        <div>
+          <section className="card">
+            <div className="cardTitle">
+              <LongName />
+            </div>
+            <StateResultsCard />
+          </section>
+          <section>
+            <StateMenu />
+          </section>
+        </div>
+        <div className="map">
+          <MapComp />
+        </div>
       </div>
     </>
   );

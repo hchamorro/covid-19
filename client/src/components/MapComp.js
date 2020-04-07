@@ -4,11 +4,7 @@ import { AllStatesDataContext } from '../utils/AllStatesData';
 
 function MapComp() {
   //styling
-  const elStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    padding: '1rem',
-  };
+
 
   const stateStyle = {
     fill: '#D3D3D3',
@@ -39,7 +35,7 @@ function MapComp() {
 
   return (
     <>
-      <div style={elStyle}>
+      <div >
         <svg xmlns="http://www.w3.org/2000/svg" width="959" height="593">
           <defs>
             <style type="text/css"></style>

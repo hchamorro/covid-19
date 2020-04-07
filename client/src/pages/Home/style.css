@@ -1,3 +1,22 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+  padding: 1.5rem;
+  transition: 0.3s;
+}
+.cardContent {
+  padding: 1rem;
+}
+.cardTitle {
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+}
 .headerOne {
   font-size: 2.5rem;
   margin: 1rem;
@@ -10,4 +29,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .cardContent {
+    padding: 0.5rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+  }
+
+  .map {
+    display: none;
+  }
 }
