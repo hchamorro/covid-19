@@ -4,10 +4,11 @@ import { StateNameContext } from '../../utils/StateName';
 import { USADataContext } from '../../utils/USAData';
 import { AllStatesDataContext } from '../../utils/AllStatesData';
 import { StateDataContext } from '../../utils/StateData';
-import NavBar from '../../components/NavBar';
 import StateMenu from '../../components/StateMenu';
 import MapComp from '../../components/MapComp';
+import LongName from '../../components/LongName';
 import StateResultsCard from '../../components/StateResultsCard';
+import './style.css';
 
 function Home() {
   const [stateName, setStateName] = useContext(StateNameContext);
@@ -41,10 +42,24 @@ function Home() {
 
   return (
     <>
-      <NavBar />
-      <StateMenu />
-      <MapComp />
-      <StateResultsCard />
+      <div className="headerWrapper">
+        <section className="headerOne">COVID-19 by State</section>
+        <section className="headerTwo">
+          Data updates daily at 4:00 p.m. EST.
+        </section>
+      </div>
+      <div>
+        <section>
+          <LongName />
+          <StateResultsCard />
+        </section>
+        <section>
+          <StateMenu />
+        </section>
+      </div>
+      <div>
+        <MapComp />
+      </div>
     </>
   );
 }
