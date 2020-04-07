@@ -4,6 +4,7 @@ import { StateNameContext } from '../../utils/StateName';
 import { USADataContext } from '../../utils/USAData';
 import { AllStatesDataContext } from '../../utils/AllStatesData';
 import { StateDataContext } from '../../utils/StateData';
+import NavBar from '../../components/NavBar';
 import StateMenu from '../../components/StateMenu';
 import MapComp from '../../components/MapComp';
 import StateResultsCard from '../../components/StateResultsCard';
@@ -40,7 +41,7 @@ function Home() {
 
   return (
     <>
-      <div>{stateName} hello world</div>
+      <NavBar />
       <StateMenu />
       <MapComp />
       <StateResultsCard />
