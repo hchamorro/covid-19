@@ -8,6 +8,7 @@ import StateMenu from '../../components/StateMenu';
 import MapComp from '../../components/MapComp';
 import LongName from '../../components/LongName';
 import StateResultsCard from '../../components/StateResultsCard';
+import LineChart from '../../components/LineChart';
 import './style.css';
 
 function Home() {
@@ -17,8 +18,8 @@ function Home() {
   const [stateData, setStateData] = useContext(StateDataContext);
 
   useEffect(() => {
-    fetchAllStatesData();
-    fetchUSAData();
+    // fetchAllStatesData();
+    // fetchUSAData();
     fetchStateDataInit();
   }, []);
 
@@ -42,6 +43,7 @@ function Home() {
 
   return (
     <>
+      {console.log(stateData)}
       <div className="headerWrapper">
         <section className="headerOne">
           <strong>COVID-19 by State </strong>
@@ -61,7 +63,10 @@ function Home() {
             </div>
             <StateResultsCard />
           </section>
-          <section>{/* future chart */}</section>
+          <section>
+            {/* future chart */}
+            <LineChart />
+          </section>
         </div>
 
         <div className="map">

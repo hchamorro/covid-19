@@ -18,7 +18,7 @@ function StateResults(props) {
 
   return (
     <>
-      {stateData && USAData ? (
+      {stateData ? (
         <>
           <div>
             <div>
