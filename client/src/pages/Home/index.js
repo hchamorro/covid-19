@@ -65,7 +65,7 @@ function Home() {
           </section>
           <section>
             {/* future chart */}
-            <LineChart />
+            {stateData ? <LineChart /> : ''}
           </section>
         </div>
 

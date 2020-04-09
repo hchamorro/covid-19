@@ -61,16 +61,11 @@ function StateResults(props) {
               )}
 
               <br />
-              {/* <div>
-                {Math.floor(
-                  (stateData[0].positive / USAData[0].positive) * 100
-                )}
-                % of all positive cases across the United States.
-              </div> */}
-              <button style={button} onClick={() => setShowChart(!showChart)}>
+
+              {/* <button style={button} onClick={() => setShowChart(!showChart)}>
                 {stateName}: {showChart ? 'Hide' : 'See More'}
               </button>
-              {showChart ? 'will be chart' : ''}
+              {showChart ? 'will be chart' : ''} */}
             </div>
           </div>
         </>

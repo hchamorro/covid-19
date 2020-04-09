@@ -1,33 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Line } from 'react-chartjs-2';
+import { StateDataContext } from '../utils/StateData';
+import moment from 'moment';
 
-//construct the data object using the appropriate properties and data set
+const LineChartComp = () => {
+  const [stateData, setStateData] = useContext(StateDataContext);
+  const [positive, setPositive] = useState([]);
+  const [date, setDate] = useState([]);
 
-const ChartPage = () => {
+  useEffect(() => {
+    setPositive([]);
+    setDate([]);
+    setLocalState();
+  }, [stateData]);
+
+  function setLocalState() {
+    stateData.reverse();
+    stateData.forEach((data) => {
+      let newDate = moment(`${data.date}`).format('M/D');
+      setPositive((positive) => [...positive, data.positive]);
+      setDate((date) => [...date, newDate]);
+    });
+  }
+
   const lineData = {
-    labels: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
-    ],
+    labels: date,
     datasets: [
       {
-        label: 'Revenue',
+        label: 'Confirmed Cases',
         fill: false,
         backgroundColor: 'blue',
         borderColor: 'blue',
         pointBorderColor: 'blue',
         pointRadius: 1,
-        data: [100, 200, 300, 400, 200, 300, 600, 800, 500, 400, 500, 800],
+        data: positive,
       },
     ],
   };
@@ -39,4 +45,4 @@ const ChartPage = () => {
   );
 };
 
-export default ChartPage;
+export default LineChartComp;
