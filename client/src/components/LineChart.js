@@ -7,10 +7,14 @@ const LineChartComp = () => {
   const [stateData, setStateData] = useContext(StateDataContext);
   const [positive, setPositive] = useState([]);
   const [date, setDate] = useState([]);
+  const [currentHospitalized, setCurrentHospitalized] = useState([]);
+  const [death, setDeath] = useState([]);
 
   useEffect(() => {
     setPositive([]);
     setDate([]);
+    setCurrentHospitalized([]);
+    setDeath([]);
     setLocalState();
   }, [stateData]);
 
@@ -20,6 +24,11 @@ const LineChartComp = () => {
       let newDate = moment(`${data.date}`).format('M/D');
       setPositive((positive) => [...positive, data.positive]);
       setDate((date) => [...date, newDate]);
+      setCurrentHospitalized((currentHospitalized) => [
+        ...currentHospitalized,
+        data.hospitalizedCurrently,
+      ]);
+      setDeath((death) => [...death, data.death]);
     });
   }
 
@@ -34,6 +43,24 @@ const LineChartComp = () => {
         pointBorderColor: 'blue',
         pointRadius: 1,
         data: positive,
+      },
+      {
+        label: 'In Hospital',
+        fill: false,
+        backgroundColor: 'green',
+        borderColor: 'green',
+        pointBorderColor: 'green',
+        pointRadius: 1,
+        data: currentHospitalized,
+      },
+      {
+        label: 'Death',
+        fill: false,
+        backgroundColor: 'red',
+        borderColor: 'red',
+        pointBorderColor: 'red',
+        pointRadius: 1,
+        data: death,
       },
     ],
   };
