@@ -5,8 +5,10 @@
   "dependencies": {
     "@material-ui/core": "^4.9.8",
     "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
     "moment": "^2.24.0",
     "react": "^16.13.1",
+    "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
     "react-moment": "^0.9.7",
     "react-router-dom": "^5.1.2",

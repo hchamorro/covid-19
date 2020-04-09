@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Axios from 'axios';
-import HTMLTooltip from '../components/StateDataToolTip';
+import HTMLTooltip from './StateDataToolTip';
 import { AllStatesDataContext } from '../utils/AllStatesData';
 import { StateNameContext } from '../utils/StateName';
 import { StateDataContext } from '../utils/StateData';
