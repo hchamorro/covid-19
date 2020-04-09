@@ -18,8 +18,8 @@ function Home() {
   const [stateData, setStateData] = useContext(StateDataContext);
 
   useEffect(() => {
-    // fetchAllStatesData();
-    // fetchUSAData();
+    fetchAllStatesData();
+    fetchUSAData();
     fetchStateDataInit();
   }, []);
 
@@ -43,7 +43,7 @@ function Home() {
 
   return (
     <>
-      {console.log(stateData)}
+      {console.log(USAData)}
       <div className="headerWrapper">
         <section className="headerOne">
           <strong>COVID-19 by State </strong>
