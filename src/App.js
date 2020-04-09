@@ -11,7 +11,7 @@ function App() {
       <Router>
         <MasterProvider>
           <NavBar />
-          <Route exact path={['/']} component={Home}></Route>
+          <Route exact path={['/', '/covid-19']} component={Home}></Route>
         </MasterProvider>
       </Router>
     </div>
