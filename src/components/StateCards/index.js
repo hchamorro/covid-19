@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { StateDataContext } from '../utils/StateData';
-import LongName from './LongName';
+import { StateDataContext } from '../../utils/StateData';
+import LongName from '../LongName';
 import StateResultsCard from './StateResultsCard';
 import StateLineChart from './StateLineChart';
 

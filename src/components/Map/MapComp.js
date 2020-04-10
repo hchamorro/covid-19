@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import Axios from 'axios';
 import HTMLTooltip from './StateDataToolTip';
-import { AllStatesDataContext } from '../utils/AllStatesData';
-import { StateNameContext } from '../utils/StateName';
-import { StateDataContext } from '../utils/StateData';
-import history from './history';
+import { AllStatesDataContext } from '../../utils/AllStatesData';
+import { StateNameContext } from '../../utils/StateName';
+import { StateDataContext } from '../../utils/StateData';
+import history from '../history';
 
 function MapComp(props) {
   //styling

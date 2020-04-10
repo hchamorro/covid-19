@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Line } from 'react-chartjs-2';
-import { USADataContext } from '../utils/USAData';
+import { USADataContext } from '../../utils/USAData';
 import moment from 'moment';
 
 const USLineChart = () => {

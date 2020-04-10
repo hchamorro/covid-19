@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { StateDataContext } from '../utils/StateData';
+import { StateDataContext } from '../../utils/StateData';
 
 function StateResults() {
   const [stateData, setStateData] = useContext(StateDataContext);

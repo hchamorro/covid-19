@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { USADataContext } from '../utils/USAData';
+import { USADataContext } from '../../utils/USAData';
 import USResultsCard from './USResultsCard';
 import USLineChart from './USLineChart';
 

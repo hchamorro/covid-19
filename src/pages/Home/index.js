@@ -6,10 +6,10 @@ import { USADataContext } from '../../utils/USAData';
 import { AllStatesDataContext } from '../../utils/AllStatesData';
 import { StateDataContext } from '../../utils/StateData';
 import StateMenu from '../../components/StateMenu';
-import MapComp from '../../components/MapComp';
+import MapComp from '../../components/Map/MapComp';
 import './style.css';
-import StateCard from '../../components/StateCard';
-import UScard from '../../components/UScard';
+import StateCard from '../../components/StateCards/index.js';
+import UScard from '../../components/USCards';
 
 function Home(props) {
   const [stateName, setStateName] = useContext(StateNameContext);
