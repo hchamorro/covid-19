@@ -53,7 +53,7 @@ function MapComp(props) {
 
   return (
     <>
-      {stateData ? (
+      {AllStatesData ? (
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="959" height="593">
             <defs>
