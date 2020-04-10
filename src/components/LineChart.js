@@ -19,8 +19,9 @@ const LineChartComp = () => {
   }, [stateData]);
 
   function setLocalState() {
-    stateData.reverse();
-    stateData.forEach((data) => {
+    let stateDataArr = [...stateData];
+    stateDataArr.reverse();
+    stateDataArr.forEach((data) => {
       let newDate = moment(`${data.date}`).format('M/D');
       setPositive((positive) => [...positive, data.positive]);
       setDate((date) => [...date, newDate]);
