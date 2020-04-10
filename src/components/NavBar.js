@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, styled } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const MyButton = styled(Button)({
+  color: 'white',
+});
+
 export default function ButtonAppBar() {
   const classes = useStyles();
 
@@ -28,11 +32,11 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             COVID-19
           </Typography>
-          <Link to={`/`}>
-            <Button color="inherit">Home</Button>
+          <Link to={`/covid-19/`}>
+            <MyButton color="inherit">Home</MyButton>
           </Link>
           <Link to={`/states`}>
-            <Button color="inherit">States Statistics</Button>
+            <MyButton color="inherit">States Statistics</MyButton>
           </Link>
           {/* <Button color="inherit">Recources</Button> */}
         </Toolbar>
