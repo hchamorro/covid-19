@@ -1,12 +1,9 @@
 import React, { useContext } from 'react';
-import { StateDataContext } from '../utils/StateData';
 import { USADataContext } from '../utils/USAData';
-import LongName from './LongName';
-import StateResultsCard from './StateResultsCard';
-import LineChart from './StateLineChart';
+import USResultsCard from './USResultsCard';
+import USLineChart from './USLineChart';
 
 function UScard() {
-  const [stateData, setStateData] = useContext(StateDataContext);
   const [USAData, setUSAStateData] = useContext(USADataContext);
 
   return (
@@ -16,9 +13,9 @@ function UScard() {
           <div className="cardTitle">
             <strong>United States</strong>
           </div>
-          <StateResultsCard />
+          <USResultsCard />
         </section>
-        <section>{stateData && USAData ? <LineChart /> : ''}</section>
+        <section>{USAData ? <USLineChart /> : ''}</section>
       </div>
     </>
   );
