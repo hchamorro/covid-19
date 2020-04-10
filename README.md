@@ -17,7 +17,8 @@ React App utilizing JavaScript
 
 ## Screenshots
 
-Include logo/demo screenshot etc.
+State Data Display:
+![](images/COVID-19StatePage.png)
 
 ## Tech/framework used
 
