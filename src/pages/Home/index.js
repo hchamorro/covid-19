@@ -45,7 +45,7 @@ function Home(props) {
     <>
       <div className="headerWrapper">
         <section className="headerOne">
-          <strong>COVID-19 by State </strong>
+          <strong>COVID-19 Resource Center </strong>
         </section>
         <section className="headerTwo">
           Data updates daily at 4:00 p.m. EST.
@@ -57,7 +57,6 @@ function Home(props) {
       <div className="content">
         <Route path={`/states`} component={StateCard} />
         <Route exact path={[`/`, '/covid-19']} component={UScard} />
-
         <div className="map">
           <MapComp />
         </div>
