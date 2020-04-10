@@ -1,48 +1,48 @@
 import React, { useContext } from 'react';
-import { StateDataContext } from '../utils/StateData';
+import { USADataContext } from '../utils/USAData';
 
 function USResults() {
-  const [stateData, setStateData] = useContext(StateDataContext);
+  const [USAData, setUSAData] = useContext(USADataContext);
 
   return (
     <>
-      {stateData ? (
+      {USAData ? (
         <>
           <div>
             <div>
               <div>
-                <strong>{stateData[0].total} </strong>people have been tested.
+                <strong>{USAData[0].total}</strong> people have been tested.
               </div>
               <div>
-                <strong>{stateData[0].positive}</strong> people have tested
+                <strong>{USAData[0].positive}</strong> people have tested
                 positive.
               </div>
-              {stateData[0].hospitalizedCumulative ? (
+              {USAData[0].hospitalizedCumulative ? (
                 <div>
-                  <strong>{stateData[0].hospitalizedCumulative}</strong> total
+                  <strong>{USAData[0].hospitalizedCumulative}</strong> total
                   hospitalized cumulatively.
                 </div>
               ) : (
                 ''
               )}
-              {stateData[0].hospitalizedCurrently ? (
+              {USAData[0].hospitalizedCurrently ? (
                 <div>
-                  <strong>{stateData[0].hospitalizedCurrently}</strong> are
+                  <strong>{USAData[0].hospitalizedCurrently}</strong> are
                   currently hospitalized.
                 </div>
               ) : (
                 ''
               )}
-              {stateData[0].death ? (
+              {USAData[0].death ? (
                 <div>
-                  <strong>{stateData[0].death}</strong> have died.
+                  <strong>{USAData[0].death}</strong> have died.
                 </div>
               ) : (
                 ''
               )}
-              {stateData[0].recovered ? (
+              {USAData[0].recovered ? (
                 <div>
-                  <strong>{stateData[0].recovered}</strong> have recovered.
+                  <strong>{USAData[0].recovered}</strong> have recovered.
                 </div>
               ) : (
                 'No info on recovery available at this time.'
