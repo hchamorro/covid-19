@@ -4,8 +4,9 @@ import HTMLTooltip from './StateDataToolTip';
 import { AllStatesDataContext } from '../utils/AllStatesData';
 import { StateNameContext } from '../utils/StateName';
 import { StateDataContext } from '../utils/StateData';
+import history from './history';
 
-function MapComp() {
+function MapComp(props) {
   //styling
 
   const stateStyle = {
@@ -40,6 +41,7 @@ function MapComp() {
   function handleOnClick(e) {
     setStateName(e.target.id);
     getData(e.target.id);
+    history.push('/states');
   }
 
   function getData(state) {

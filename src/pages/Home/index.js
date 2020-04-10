@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { Route } from 'react-router-dom';
 import Axios from 'axios';
 import { StateNameContext } from '../../utils/StateName';
 import { USADataContext } from '../../utils/USAData';
@@ -6,12 +7,10 @@ import { AllStatesDataContext } from '../../utils/AllStatesData';
 import { StateDataContext } from '../../utils/StateData';
 import StateMenu from '../../components/StateMenu';
 import MapComp from '../../components/MapComp';
-import LongName from '../../components/LongName';
-import StateResultsCard from '../../components/StateResultsCard';
-import LineChart from '../../components/LineChart';
 import './style.css';
+import StateCard from '../../components/StateCard';
 
-function Home() {
+function Home(props) {
   const [stateName, setStateName] = useContext(StateNameContext);
   const [AllStatesData, setAllStatesData] = useContext(AllStatesDataContext);
   const [USAData, setUSAData] = useContext(USADataContext);
@@ -30,7 +29,7 @@ function Home() {
   }
 
   function fetchUSAData() {
-    Axios.get('https://covidtracking.com/api/us').then((res) =>
+    Axios.get('https://covidtracking.com/api/us/daily').then((res) =>
       setUSAData(res.data)
     );
   }
@@ -56,18 +55,7 @@ function Home() {
         </section>
       </div>
       <div className="content">
-        <div className="cardWrapper">
-          <section className="card">
-            <div className="cardTitle">
-              <LongName />
-            </div>
-            <StateResultsCard />
-          </section>
-          <section>
-            {/* future chart */}
-            {stateData ? <LineChart /> : ''}
-          </section>
-        </div>
+        <Route path={`/states`} component={StateCard} />
 
         <div className="map">
           <MapComp />

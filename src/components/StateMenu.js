@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import { StateNameContext } from '../utils/StateName';
 import { StateDataContext } from '../utils/StateData';
+import history from './history';
 import Axios from 'axios';
 
 function StateMenu() {
@@ -26,6 +27,7 @@ function StateMenu() {
     setStateName(state);
     getData(state);
     handleClose();
+    history.push('/states');
   };
 
   function getData(state) {

@@ -1,20 +1,8 @@
-import React, { useState, useContext } from 'react';
-import { USADataContext } from '../utils/USAData';
+import React, { useContext } from 'react';
 import { StateDataContext } from '../utils/StateData';
-import { StateNameContext } from '../utils/StateName';
 
-function StateResults(props) {
-  const [stateName, setStateName] = useContext(StateNameContext);
-  const [USAData, setUSAData] = useContext(USADataContext);
+function StateResults() {
   const [stateData, setStateData] = useContext(StateDataContext);
-  const [showChart, setShowChart] = useState(false);
-
-  const button = {
-    display: 'inline block',
-    marginTop: '0.5rem',
-    border: '1px solid',
-    borderRadius: '5%',
-  };
 
   return (
     <>
@@ -59,13 +47,6 @@ function StateResults(props) {
               ) : (
                 'No info on recovery available at this time.'
               )}
-
-              <br />
-
-              {/* <button style={button} onClick={() => setShowChart(!showChart)}>
-                {stateName}: {showChart ? 'Hide' : 'See More'}
-              </button>
-              {showChart ? 'will be chart' : ''} */}
             </div>
           </div>
         </>

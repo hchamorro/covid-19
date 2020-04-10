@@ -3,7 +3,7 @@ import { Line } from 'react-chartjs-2';
 import { StateDataContext } from '../utils/StateData';
 import moment from 'moment';
 
-const LineChartComp = () => {
+const StateLineChart = () => {
   const [stateData, setStateData] = useContext(StateDataContext);
   const [positive, setPositive] = useState([]);
   const [date, setDate] = useState([]);
@@ -39,27 +39,27 @@ const LineChartComp = () => {
       {
         label: 'Confirmed Cases',
         fill: false,
-        backgroundColor: 'blue',
-        borderColor: 'blue',
-        pointBorderColor: 'blue',
+        backgroundColor: '#2051AC',
+        borderColor: '#2051AC',
+        pointBorderColor: '#2051AC',
         pointRadius: 1,
         data: positive,
       },
       {
         label: 'In Hospital',
         fill: false,
-        backgroundColor: 'green',
-        borderColor: 'green',
-        pointBorderColor: 'green',
+        backgroundColor: '#619D36',
+        borderColor: '#619D36',
+        pointBorderColor: '#619D36',
         pointRadius: 1,
         data: currentHospitalized,
       },
       {
         label: 'Death',
         fill: false,
-        backgroundColor: 'red',
-        borderColor: 'red',
-        pointBorderColor: 'red',
+        backgroundColor: '#BC252F',
+        borderColor: '#BC252F',
+        pointBorderColor: '#BC252F',
         pointRadius: 1,
         data: death,
       },
@@ -73,4 +73,4 @@ const LineChartComp = () => {
   );
 };
 
-export default LineChartComp;
+export default StateLineChart;

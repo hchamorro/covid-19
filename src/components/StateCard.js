@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { StateDataContext } from '../utils/StateData';
 import LongName from './LongName';
 import StateResultsCard from './StateResultsCard';
-import LineChart from './LineChart';
+import LineChart from './StateLineChart';
 
 function StateCard() {
   const [stateData, setStateData] = useContext(StateDataContext);
