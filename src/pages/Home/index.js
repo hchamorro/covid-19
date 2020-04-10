@@ -9,6 +9,7 @@ import StateMenu from '../../components/StateMenu';
 import MapComp from '../../components/MapComp';
 import './style.css';
 import StateCard from '../../components/StateCard';
+import UScard from '../../components/UScard';
 
 function Home(props) {
   const [stateName, setStateName] = useContext(StateNameContext);
@@ -42,7 +43,6 @@ function Home(props) {
 
   return (
     <>
-      {console.log(USAData)}
       <div className="headerWrapper">
         <section className="headerOne">
           <strong>COVID-19 by State </strong>
@@ -56,6 +56,7 @@ function Home(props) {
       </div>
       <div className="content">
         <Route path={`/states`} component={StateCard} />
+        <Route exact path={[`/`, '/covid-19']} component={UScard} />
 
         <div className="map">
           <MapComp />
