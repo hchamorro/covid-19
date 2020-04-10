@@ -17,7 +17,12 @@ React App utilizing JavaScript
 
 ## Screenshots
 
+Home Page Display:
+
+![](images/COVID-19HomePage.png)
+
 State Data Display:
+
 ![](images/COVID-19StatePage.png)
 
 ## Tech/framework used
