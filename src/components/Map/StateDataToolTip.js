@@ -2,6 +2,7 @@ import React from 'react';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import formatNumber from '../formatNumber';
 
 function StateDataToolTip(props) {
   const HtmlTooltip = withStyles((theme) => ({
@@ -19,9 +20,9 @@ function StateDataToolTip(props) {
       title={
         <React.Fragment>
           <Typography color="inherit">{props.name}</Typography>
-          <b>Total Tested: </b> {props.totalTested}
+          <b>Total Tested: </b> {formatNumber(props.totalTested)}
           <br />
-          <b>Positive Results: </b> {props.totalPositive}
+          <b>Positive Results: </b> {formatNumber(props.totalPositive)}
         </React.Fragment>
       }
     >
