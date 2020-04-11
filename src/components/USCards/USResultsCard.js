@@ -16,19 +16,10 @@ function USResults() {
                 been tested.
               </div>
               <div>
-                <strong>{formatNumber(USAData[0].positive)}</strong> people have
-                tested positive.
+                <strong>{formatNumber(USAData[0].positive)}</strong> have tested
+                positive.
               </div>
-              {USAData[0].hospitalizedCumulative ? (
-                <div>
-                  <strong>
-                    {formatNumber(USAData[0].hospitalizedCumulative)}
-                  </strong>{' '}
-                  total hospitalized cumulatively.
-                </div>
-              ) : (
-                ''
-              )}
+
               {USAData[0].hospitalizedCurrently ? (
                 <div>
                   <strong>
