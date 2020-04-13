@@ -20,16 +20,6 @@ function USResults() {
                 positive.
               </div>
 
-              {USAData[0].hospitalizedCurrently ? (
-                <div>
-                  <strong>
-                    {formatNumber(USAData[0].hospitalizedCurrently)}
-                  </strong>{' '}
-                  are currently hospitalized.
-                </div>
-              ) : (
-                ''
-              )}
               {USAData[0].death ? (
                 <div>
                   <strong>{formatNumber(USAData[0].death)}</strong> have died.
