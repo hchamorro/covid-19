@@ -37,7 +37,7 @@ function Home(props) {
 
   function fetchStateDataInit() {
     Axios.get(
-      `https://cors-anywhere.herokuapp.com/https://covidtracking.com/api/states/daily?state=${stateName}`
+      `https://cors-anywhere.herokuapp.com/https://covidtracking.com/api/v1/states/${stateName.toLowerCase()}/daily.json`
     ).then((res) => setStateData(res.data));
   }
 
